@@ -10,7 +10,9 @@ module.exports = {
         '44px'     : '2.75rem',
         '46px'     : '2.875rem',
         '70px'     : '4.375rem',
+        '156.75px': '9.797rem',
         '159.63px': '9.977rem',
+        '171px' : '10.688rem',
         '174.15px' : '10.884rem',
         '188.74px' : '11.796rem',
         '227px'    : '14.188rem',
@@ -34,12 +36,22 @@ module.exports = {
         '174.15px' : '10.884rem'
       },
       spacing: {
+        '15.58pxNeg' : '-0.974rem',
+        '17pxNeg': '-1.063rem',
+        '8.25px':'0.516rem',
+        '9px': '0.563rem',
+        '12.97px': '0.811rem',
         '0.625': '0.625rem',
+        '12.97px': '0.811rem',
+        '14.15px': '0.884rem',
         '0.938': '0.938rem',
         '1.25' : '1.25rem',
+        '21px' : '1.313rem',
         '1.375': '1.375rem',
         '1.563': '1.563rem',
+        '28.13px': '1.758rem',
         '1.875': '1.875rem',
+        '34.7px': '2.169rem',
         '9'    : '2.25rem',
         '44px' : '2.75rem',
         '46px': '2.875rem',
@@ -56,8 +68,11 @@ module.exports = {
       maxWidth: {
         '25'  : '25rem',
         '18.5': '18.5rem',
+        '372px'    : '23.25rem',
         '25'  : '25rem',
-        '43'  : '43rem'
+        '43'  : '43rem',
+        '342.95px' : '21.434rem',
+        '458px'    : '28.625rem',
       },
       borderWidth: {
         '1': '1px',
@@ -82,6 +97,12 @@ module.exports = {
         'grey'                 : '#6A707B',
         'cream'                : '#E3E3E4',
         'glass'                : '#F2F5FA',
+        'dark-grey'            : '#4D4D4D',
+        'bluish'               : '#C1C8F0',
+        'bluish-grey'          : '#EAEDFA',
+        'yellow'               : '#FFD900',
+        'dark-yellow'          : '#FFBB00',
+        'light-blue'           : '#C7EDED'
       },
       fontFamily: {
         georgia    : ['Georgia'],
@@ -92,10 +113,13 @@ module.exports = {
         2 :['2rem', '2.75rem'],
         1 :['1rem', '1.75rem'],
         44:['2.25rem', '2.75rem'],
-        30:['1.875rem', '2.25rem']
+        30:['1.875rem', '2.25rem'],
+        18:['1.125rem', '1.375rem'],
+        16:['1rem', '1.25rem'],
+        15:['0.939rem', '1.25rem']
       },
       backgroundImage: {
-        'background-image' : 'url(@img/Page.svg)',
+        'background-image' : 'url(@img/background-image.jpg)',
       },
       boxShadow: {
         'bottom': '0px 30px 40px rgba(19, 24, 33, 0.06)',
