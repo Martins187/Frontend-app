@@ -1,7 +1,8 @@
+import "@fontsource/fredoka-one"
 import { createApp } from 'vue'
+import routes from './router'
 import App from '@/App.vue'
 import '@/index.css'
-import routes from './router'
 
 const app = createApp(App)
 
