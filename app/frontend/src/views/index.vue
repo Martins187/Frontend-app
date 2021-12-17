@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-background-image h-screen">
+  <div class="bg-background-image bg-cover">
     <div class="flex justify-center">
         <img 
             class="w-188.74px pt-8 sm:w-242px sm:pt-46px"
@@ -10,7 +10,7 @@
     <div class="w-100 flex justify-center">
         <keep-alive>
             <component 
-                class="p-5 bg-red-500 sm:w-858px sm:p-0"
+                class="p-5 sm:w-858px sm:p-0"
                 :is= "component"
                 @changePage="changePage"
             />

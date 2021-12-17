@@ -20,6 +20,8 @@ module.exports = {
         '15.25'    : '15.25rem',
         '18.5'     : '18.5rem',
         '342.95px' : '21.434rem',
+        '345px'    : '21.563rem',
+        '25'       : '25rem',
         '30'       : '30rem',
         '562.45px' : '35.153rem',
         '663px'    : '41.438rem',
@@ -32,6 +34,8 @@ module.exports = {
         '15'   : '3.75rem',
         '26px' : '1.625rem',
         '46px' : '2.875rem',
+        '75px' : '4.688rem',
+        '90px' : '5.625rem',
         '159.63px': '9.977rem',
         '174.15px' : '10.884rem'
       },
@@ -59,8 +63,11 @@ module.exports = {
         '3.313': '3.313rem',
         '4.125': '4.125rem',
         '17' : '4.25rem',
+        '78.67px': '4.917rem',
+        '95.68px': '5.98rem',
         '6.25' : '6.25rem',
         '7.125': '7.125rem',
+        '7.25' : '7.35rem',
         '8.125': '8.125rem',
         '174.15px' : '10.884rem',
         '14.625': '14.625rem'
@@ -102,7 +109,11 @@ module.exports = {
         'bluish-grey'          : '#EAEDFA',
         'yellow'               : '#FFD900',
         'dark-yellow'          : '#FFBB00',
-        'light-blue'           : '#C7EDED'
+        'light-blue'           : '#C7EDED',
+        'darker-green'         : '#25A72E',
+        'light-green'          : '#79C523',
+        'victory-green-darker'  : '#1EC229',
+        'victory-green-light' : '#85E31A',
       },
       fontFamily: {
         georgia    : ['Georgia'],
@@ -116,7 +127,8 @@ module.exports = {
         30:['1.875rem', '2.25rem'],
         18:['1.125rem', '1.375rem'],
         16:['1rem', '1.25rem'],
-        15:['0.939rem', '1.25rem']
+        15:['0.939rem', '1.25rem'],
+        25:['1.6rem', '1.938rem']
       },
       backgroundImage: {
         'background-image' : 'url(@img/background-image.jpg)',
