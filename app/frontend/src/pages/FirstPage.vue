@@ -1,46 +1,17 @@
 <template>
     <div>
-        <div class="mt-21px sm:mt-11">
+        <div class="sm:mt-11">
             <Heading :headerText="headerText" />
         </div>
 
-        <div class="flex justify-center mt-12">
+        <div class="flex justify-center mt-29.48px sm:mt-12">
             <div class="w-342.95px flex flex-wrap justify-between sm:w-562.45px ">
                 <icon-block 
-                    @click="selectedBlockName = 'Blackjack'" 
+                    v-for="icon in iconBlocks"
+                    @click="selectedBlockName = icon.blockText" 
                     :selectedBlockName="selectedBlockName" 
-                    :blockImageUrl="BlackjackIconUrl" 
-                    :blockText="'Blackjack'"
-                />
-                <icon-block
-                    @click="selectedBlockName = 'Roulette'" 
-                    :selectedBlockName="selectedBlockName" 
-                    :blockImageUrl="RouletteIconUrl" 
-                    :blockText="'Roulette'"
-                />
-                <icon-block 
-                    @click="selectedBlockName = 'Baccarat'" 
-                    :selectedBlockName="selectedBlockName" 
-                    :blockImageUrl="BaccaratIconUrl" 
-                    :blockText="'Baccarat'"
-                />
-                <icon-block 
-                    @click="selectedBlockName = 'Poker'" 
-                    :selectedBlockName="selectedBlockName" 
-                    :blockImageUrl="PokerIconUrl" 
-                    :blockText="'Poker'"
-                />
-                <icon-block 
-                    @click="selectedBlockName = 'Dragon & Tiger'" 
-                    :selectedBlockName="selectedBlockName" 
-                    :blockImageUrl="DragonAndTigerIconUrl" 
-                    :blockText="'Dragon & Tiger'"
-                />
-                <icon-block 
-                    @click="selectedBlockName = 'Slots'" 
-                    :selectedBlockName="selectedBlockName" 
-                    :blockImageUrl="SlotsIconUrl" 
-                    :blockText="'Slots'"
+                    :blockImageUrl="icon.blockImageUrl" 
+                    :blockText="icon.blockText"
                 />
             </div>
         </div>
@@ -94,6 +65,16 @@
     const largeButtonEnabled = computed(() => {
         return selectedBlockName.value != ''
     })
+
+    const iconBlocks = [
+        
+        { blockImageUrl : DragonAndTigerIconUrl, blockText : 'Dragon & Tiger'},
+        { blockImageUrl : BlackjackIconUrl, blockText : 'Blackjack'},
+        { blockImageUrl : RouletteIconUrl, blockText : 'Roulette'},
+        { blockImageUrl : BaccaratIconUrl, blockText : 'Baccarat'},
+        { blockImageUrl : PokerIconUrl, blockText : 'Poker'},
+        { blockImageUrl : SlotsIconUrl, blockText : 'Slots'},
+    ]
 
     function changePage()
     {

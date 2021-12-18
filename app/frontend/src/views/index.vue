@@ -1,22 +1,22 @@
 <template>
-  <div class="bg-background-image bg-cover w-fit">
-    <div class="flex justify-center">
-        <img 
-            class="w-188.74px pt-8 sm:w-242px sm:pt-46px"
-            src="@img/top-logo.png" 
-        />
-    </div>
-
-    <div class="w-100 flex justify-center">
-        <keep-alive>
-            <component 
-                class="p-5 sm:w-858px sm:p-0"
-                :is= "component"
-                @changePage="changePage"
+    <div class="bg-background-image bg-cover h-screen w-fit sm:w-full">
+        <div class="flex justify-center">
+            <img 
+                class="w-188.74px pt-8 sm:w-242px sm:pt-46px"
+                src="@img/top-logo.png" 
             />
-        </keep-alive>
+        </div>
+
+        <div class="w-100 flex justify-center">
+            <keep-alive>
+                <component 
+                    class="p-5 sm:w-858px sm:p-0"
+                    :is= "component"
+                    @changePage="changePage"
+                />
+            </keep-alive>
+        </div>
     </div>
-  </div>
 </template>
 
 <script setup>

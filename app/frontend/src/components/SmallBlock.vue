@@ -2,8 +2,8 @@
    <div 
         @click="isSelected = !isSelected"
         class="w-105.85 h-105.85 mt-13.23px items-center bg-black border-solid 
-        border-1 rounded-10px sm:mt-0.938 hover:cursor-pointer">
-            gygy
+        border-1 rounded-10px sm:mt-0.938 sm:h-30px sm:w-30px text-white hover:cursor-pointer">
+            gttgtg
         <div class="flex justify-center font-fredokaOne 
             text-16 text-dark-grey sm:text-18">
             {{ blockText }}
