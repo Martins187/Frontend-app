@@ -1,6 +1,6 @@
 <template>
     <div class="flex justify-center">
-        <div class="max-w-43 text-center text-30 text-white 
+        <div class="max-w-858px text-center text-30 text-white 
             font-fredokaOne uppercase sm:text-44">
             {{ headerText }}
         </div>

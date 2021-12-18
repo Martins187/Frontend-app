@@ -4,9 +4,30 @@
             <Heading :headerText="headerText" />
         </div>
 
-        <div class="flex justify-center mt-12">
-            <div class="w-404px flex flex-wrap justify-between sm:w-795px ">
-                <small-block />
+        <div class="flex justify-center mt-1.875">
+            <info-block :infoText="'pick up favourite providers'"/>
+        </div>
+
+        <div class="flex justify-center mt-1.875">
+            <div class="w-357.24px flex flex-wrap justify-between sm:w-404px md:w-795px">
+                <small-block :blockImageUrl="PragmaticPlayIcon"/>
+                <small-block :blockImageUrl="PragmaticPlayIcon"/>
+                <small-block :blockImageUrl="PragmaticPlayIcon"/>
+                <small-block :blockImageUrl="PragmaticPlayIcon"/>
+                <small-block :blockImageUrl="PragmaticPlayIcon"/>
+                <small-block :blockImageUrl="PragmaticPlayIcon"/>
+                <small-block :blockImageUrl="PragmaticPlayIcon"/>
+                <small-block :blockImageUrl="PragmaticPlayIcon"/>
+                <small-block :blockImageUrl="PragmaticPlayIcon"/>
+                <small-block :blockImageUrl="PragmaticPlayIcon"/>
+                <small-block :blockImageUrl="PragmaticPlayIcon"/>
+                <small-block :blockImageUrl="PragmaticPlayIcon"/>
+                <small-block :blockImageUrl="PragmaticPlayIcon"/>
+                <small-block :blockImageUrl="PragmaticPlayIcon"/>
+                <small-block :blockImageUrl="PragmaticPlayIcon"/>
+                <small-block :blockImageUrl="PragmaticPlayIcon"/>
+                <small-block :blockImageUrl="PragmaticPlayIcon"/>
+                <small-block :blockImageUrl="PragmaticPlayIcon"/>
             </div>
         </div>
 
@@ -30,11 +51,12 @@
     import HeadingBottom from '@/components/HeadingBottom.vue'
     import LargeButton from '@/components/LargeButton.vue'
     import SmallBlock from '@/components/SmallBlock.vue'
+    import InfoBlock from '@/components/InfoBlock.vue'
     import Heading from '@/components/Heading.vue'
     import Question2 from '@/pages/Question1.vue'
     import { computed, ref } from 'vue'
 
-    // import DragonAndTigerIconUrl from '@img/dragon-and-tiger-icon.png'
+    import PragmaticPlayIcon from '@img/pragmatic-play-icon.png'
 
 
     const bottomHeaderText = 'Please select at least 3 game providers & earn (5 free spins)'

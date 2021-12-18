@@ -6,9 +6,9 @@
         :class="[ selectedBlockName ==  blockText ? ['bg-gradient-to-b', 'from-yellow', 
         'to-dark-yellow', 'border-yellow']: '']">
         <img class="w-156.75px mt-15.58pxNeg mb-8.25px 
-                sm:w-171px sm:mt-17pxNeg sm:mb-9px" 
-                :src="blockImageUrl" 
-            />
+            sm:w-171px sm:mt-17pxNeg sm:mb-9px" 
+            :src="blockImageUrl" 
+        />
 
         <div class="flex justify-center font-fredokaOne 
             text-16 text-dark-grey sm:text-18">

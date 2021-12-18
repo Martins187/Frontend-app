@@ -1,28 +1,23 @@
 <template>
    <div 
         @click="isSelected = !isSelected"
-        class="w-105.85 h-105.85 mt-13.23px items-center bg-black border-solid 
-        border-1 rounded-10px sm:mt-0.938 sm:h-30px sm:w-30px text-white hover:cursor-pointer">
-            gttgtg
-        <div class="flex justify-center font-fredokaOne 
-            text-16 text-dark-grey sm:text-18">
-            {{ blockText }}
-        </div>
+        class="w-105.85px h-105.85px mt-13.23px items-center bg-black rounded-10px flex justify-center items-center sm:mt-4 sm:w-30 sm:h-30 hover:cursor-pointer">
+        <img class="w-20 mb-46px mt-33px sm:w-91px"
+            :src="blockImageUrl" 
+        />
    </div>
 </template>
 
 <script setup>
     import { computed, ref } from 'vue'
 
-    // const props = defineProps({
-    //     blockImageUrl: {},
-    //     blockText: {},
-    //     selectedBlockName: {}
-    // })
+    const props = defineProps({
+        blockImageUrl: {}
+    })
 
-    // const blockImageUrl = computed(() => {
-    //     return props.blockImageUrl
-    // })
+    const blockImageUrl = computed(() => {
+        return props.blockImageUrl
+    })
 
     // const blockText = computed(() => {
     //     return props.blockText
