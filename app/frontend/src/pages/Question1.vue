@@ -1,5 +1,9 @@
 <template>
     <div>
+        <div class="flex justify-center mt-1.875">
+            <progress-bar :questionNumber="'1'" :totalQuestions="'5'"/>
+        </div>
+
         <div class="mt-21px sm:mt-11">
             <Heading :headerText="headerText" />
         </div>
@@ -52,6 +56,7 @@
     import LargeButton from '@/components/LargeButton.vue'
     import SmallBlock from '@/components/SmallBlock.vue'
     import InfoBlock from '@/components/InfoBlock.vue'
+    import ProgressBar from '@/components/ProgressBar.vue'
     import Heading from '@/components/Heading.vue'
     import Question2 from '@/pages/Question1.vue'
     import { computed, ref } from 'vue'
