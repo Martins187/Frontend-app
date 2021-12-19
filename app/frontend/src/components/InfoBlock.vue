@@ -1,8 +1,8 @@
 <template>
-    <div class="flex justify-center items-center w-25 h-12 border-1 
-        border-solid border-yellow rounded-10px">
-        <div class="max-w-342.95px text-center text-15 text-yellow 
-            font-fredokaOne uppercase sm:text-18 sm:max-w-458px">
+    <div class="flex justify-center items-center w-22 h-12 border-1 
+        border-solid border-yellow rounded-10px sm:w-25">
+        <div class="w-34 text-center text-15 text-yellow 
+            font-fredokaOne uppercase sm:text-18 sm:w-25">
             {{ infoText }}
         </div>
     </div>

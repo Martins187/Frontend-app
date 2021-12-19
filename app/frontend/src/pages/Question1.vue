@@ -8,11 +8,11 @@
             <Heading :headerText="headerText" />
         </div>
 
-        <div class="flex justify-center mt-1.875">
+        <div class="flex justify-center mt-3 sm:mt-1.875">
             <info-block :infoText="'pick up favourite providers'"/>
         </div>
 
-        <div class="flex justify-center mt-1.875">
+        <div class="flex justify-center mt-2 sm:mt-1.875">
             <div class="w-357.24px flex flex-wrap justify-between sm:w-404px md:w-795px">
                 <small-block 
                     v-for="icon in iconBlocks"
@@ -40,24 +40,25 @@
 </template>
 
 <script setup>
+    import { computed, ref } from 'vue'
+
     import HeadingBottom from '@/components/HeadingBottom.vue'
+    import ProgressBar from '@/components/ProgressBar.vue'
     import LargeButton from '@/components/LargeButton.vue'
     import SmallBlock from '@/components/SmallBlock.vue'
     import InfoBlock from '@/components/InfoBlock.vue'
-    import ProgressBar from '@/components/ProgressBar.vue'
     import Heading from '@/components/Heading.vue'
-    import Question2 from '@/pages/Question1.vue'
-    import { computed, ref } from 'vue'
+    import Question2 from '@/pages/Question2.vue'
 
     import PragmaticPlayIcon from '@img/pragmatic-play-icon.png'
     import BoomingGamesIcon from '@img/booming-games-icon.png'
-    import EgtIcon from '@img/egt-icon.png'
+    import MicroGamingIcon from '@img/microgaming-icon.png'
     import QuickSpinIcon from '@img/quickspin-icon.png'
+    import GoldenHero from '@img/golden-hero-icon.png'
+    import HabaneroIcon from '@img/habanero-icon.png'
     import IsoftbetIcon from '@img/isoftbet-icon.png'
     import EzugiIcon from '@img/ezugi-icon.png'
-    import MicroGamingIcon from '@img/microgaming-icon.png'
-    import HabaneroIcon from '@img/habanero-icon.png'
-    import GoldenHero from '@img/golden-hero-icon.png'
+    import EgtIcon from '@img/egt-icon.png'
 
     const bottomHeaderText = 'Please select at least 3 game providers & earn (5 free spins)'
     const headerText = 'pick up your favorite providers & games'
@@ -159,15 +160,13 @@
     let largeButtonEnabled = computed(() => {
         let selectedItems = 0
 
-        for(let i = 0; i < iconBlocks; i++)
+        for(let i = 0; i < iconBlocks.value.length; i++)
         {
-            if(iconBlocks[i].isSelected)
+            if(iconBlocks.value[i].isSelected)
             {
-                selecteditems++
+                selectedItems++
             }
         }
-
-        console.log(selectedItems)
 
         if(selectedItems >= 3)
         {
@@ -176,8 +175,6 @@
 
         return false
     })
-
-    let selectedBlockName = ref('')
 
     function changeSelectedValue(id)
     {
