@@ -60,8 +60,8 @@
     import RamsesLogo from '@img/ramses-logo.png'
     import KrakenLogo from '@img/kraken-logo.png'
 
-    const bottomHeaderText = 'Please select at least 3 casino games & earn (5 free spins)'
     const headerText = 'pick up your favorite providers & games'
+    const bottomHeaderText = 'Please select at least 3 casino games & earn (5 free spins)'
     const emit = defineEmits(['change', 'delete'])
 
     const iconBlocks = ref([

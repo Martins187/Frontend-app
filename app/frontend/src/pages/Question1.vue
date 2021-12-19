@@ -61,8 +61,8 @@
     import EzugiIcon from '@img/ezugi-icon.png'
     import EgtIcon from '@img/egt-icon.png'
 
-    const bottomHeaderText = 'Please select at least 3 game providers & earn (5 free spins)'
     const headerText = 'pick up your favorite providers & games'
+    const bottomHeaderText = 'Please select at least 3 game providers & earn (5 free spins)'
     const emit = defineEmits(['change', 'delete'])
 
     const iconBlocks = ref([
