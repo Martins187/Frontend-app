@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="flex justify-center mt-1.875">
-            <progress-bar :questionNumber="'1'" :totalQuestions="'5'"/>
+            <progress-bar :questionNumber="1" :totalQuestions="5"/>
         </div>
 
         <div class="mt-21px sm:mt-11">
@@ -14,24 +14,12 @@
 
         <div class="flex justify-center mt-1.875">
             <div class="w-357.24px flex flex-wrap justify-between sm:w-404px md:w-795px">
-                <small-block :blockImageUrl="PragmaticPlayIcon"/>
-                <small-block :blockImageUrl="PragmaticPlayIcon"/>
-                <small-block :blockImageUrl="PragmaticPlayIcon"/>
-                <small-block :blockImageUrl="PragmaticPlayIcon"/>
-                <small-block :blockImageUrl="PragmaticPlayIcon"/>
-                <small-block :blockImageUrl="PragmaticPlayIcon"/>
-                <small-block :blockImageUrl="PragmaticPlayIcon"/>
-                <small-block :blockImageUrl="PragmaticPlayIcon"/>
-                <small-block :blockImageUrl="PragmaticPlayIcon"/>
-                <small-block :blockImageUrl="PragmaticPlayIcon"/>
-                <small-block :blockImageUrl="PragmaticPlayIcon"/>
-                <small-block :blockImageUrl="PragmaticPlayIcon"/>
-                <small-block :blockImageUrl="PragmaticPlayIcon"/>
-                <small-block :blockImageUrl="PragmaticPlayIcon"/>
-                <small-block :blockImageUrl="PragmaticPlayIcon"/>
-                <small-block :blockImageUrl="PragmaticPlayIcon"/>
-                <small-block :blockImageUrl="PragmaticPlayIcon"/>
-                <small-block :blockImageUrl="PragmaticPlayIcon"/>
+                <small-block 
+                    v-for="icon in iconBlocks"
+                    @click="changeSelectedValue(icon.id)"
+                    :blockImageUrl="icon.blockImageUrl"
+                    :isSelected="icon.isSelected"
+                />
             </div>
         </div>
 
@@ -62,17 +50,145 @@
     import { computed, ref } from 'vue'
 
     import PragmaticPlayIcon from '@img/pragmatic-play-icon.png'
-
+    import BoomingGamesIcon from '@img/booming-games-icon.png'
+    import EgtIcon from '@img/egt-icon.png'
+    import QuickSpinIcon from '@img/quickspin-icon.png'
+    import IsoftbetIcon from '@img/isoftbet-icon.png'
+    import EzugiIcon from '@img/ezugi-icon.png'
+    import MicroGamingIcon from '@img/microgaming-icon.png'
+    import HabaneroIcon from '@img/habanero-icon.png'
+    import GoldenHero from '@img/golden-hero-icon.png'
 
     const bottomHeaderText = 'Please select at least 3 game providers & earn (5 free spins)'
     const headerText = 'pick up your favorite providers & games'
     const emit = defineEmits(['change', 'delete'])
 
+    const iconBlocks = ref([
+        {
+            id:1,
+            isSelected : false,
+            blockImageUrl : PragmaticPlayIcon
+        },
+        {
+            id:2,
+            isSelected : false,
+            blockImageUrl : BoomingGamesIcon
+        },
+        {
+            id:3,
+            isSelected : false,
+            blockImageUrl : EgtIcon
+        },
+        {
+            id:4,
+            isSelected : false,
+            blockImageUrl : PragmaticPlayIcon
+        },
+        {
+            id:5,
+            isSelected : false,
+            blockImageUrl : BoomingGamesIcon
+        },
+        {
+            id:6,
+            isSelected : false,
+            blockImageUrl : EgtIcon
+        },
+        {
+            id:7,
+            isSelected : false,
+            blockImageUrl : QuickSpinIcon
+        },
+        {
+            id:8,
+            isSelected : false,
+            blockImageUrl : IsoftbetIcon
+        },
+        {
+            id:9,
+            isSelected : false,
+            blockImageUrl : EzugiIcon
+        },
+        {
+            id:10,
+            isSelected : false,
+            blockImageUrl : QuickSpinIcon
+        },
+        {
+            id:11,
+            isSelected : false,
+            blockImageUrl : IsoftbetIcon
+        },
+        {
+            id:12,
+            isSelected : false,
+            blockImageUrl : EzugiIcon
+        },
+        {
+            id:13,
+            isSelected : false,
+            blockImageUrl : MicroGamingIcon
+        },
+        {
+            id:14,
+            isSelected : false,
+            blockImageUrl : HabaneroIcon
+        },
+        {
+            id:15,
+            isSelected : false,
+            blockImageUrl : GoldenHero
+        },
+        {
+            id:16,
+            isSelected : false,
+            blockImageUrl : MicroGamingIcon
+        },
+        {
+            id:17,
+            isSelected : false,
+            blockImageUrl : HabaneroIcon
+        },
+        {
+            id:18,
+            isSelected : false,
+            blockImageUrl : GoldenHero
+        },
+    ])
+
+    let largeButtonEnabled = computed(() => {
+        let selectedItems = 0
+
+        for(let i = 0; i < iconBlocks; i++)
+        {
+            if(iconBlocks[i].isSelected)
+            {
+                selecteditems++
+            }
+        }
+
+        console.log(selectedItems)
+
+        if(selectedItems >= 3)
+        {
+            return true
+        }
+
+        return false
+    })
+
     let selectedBlockName = ref('')
 
-    const largeButtonEnabled = computed(() => {
-        return selectedBlockName.value != ''
-    })
+    function changeSelectedValue(id)
+    {
+        for(let i = 0; i < iconBlocks.value.length; i++)
+        {
+            if(iconBlocks.value[i].id == id)
+            {
+                iconBlocks.value[i].isSelected = !iconBlocks.value[i].isSelected
+            }
+        }
+    }
 
     function changePage()
     {

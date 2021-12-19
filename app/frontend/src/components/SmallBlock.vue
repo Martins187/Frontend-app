@@ -1,7 +1,7 @@
 <template>
-   <div 
-        @click="isSelected = !isSelected"
-        class="w-105.85px h-105.85px mt-13.23px items-center bg-black rounded-10px flex justify-center items-center sm:mt-4 sm:w-30 sm:h-30 hover:cursor-pointer">
+   <div
+        class="w-105.85px h-105.85px mt-13.23px items-center bg-black rounded-10px flex justify-center items-center sm:mt-4 sm:w-30 sm:h-30 hover:cursor-pointer"
+        :class="isSelected ? ['border-5', 'border-green'] : ''">
         <img class="w-20 mb-46px mt-33px sm:w-91px"
             :src="blockImageUrl" 
         />
@@ -12,6 +12,7 @@
     import { computed, ref } from 'vue'
 
     const props = defineProps({
+        isSelected: {},
         blockImageUrl: {}
     })
 
@@ -19,13 +20,8 @@
         return props.blockImageUrl
     })
 
-    // const blockText = computed(() => {
-    //     return props.blockText
-    // })
-
-    // const selectedBlockName = computed(() => {
-    //     return props.selectedBlockName
-    // })
-  
+    const isSelected = computed(() => {
+        return props.isSelected
+    })
 </script>
 

@@ -37,6 +37,16 @@ module.exports = {
         '858px'    : '53.625rem',
         '55'       : '56rem'
       },
+      maxWidth: {
+        '25'  : '25rem',
+        '18.5': '18.5rem',
+        '372px'    : '23.25rem',
+        '25'  : '25rem',
+        '43'  : '43rem',
+        '342.95px' : '21.434rem',
+        '458px'    : '28.625rem',
+        '858px'    : '53.625rem',
+      },
       height: {
         '1px'  : '0.063rem',
         '5px'  : '0.313rem',
@@ -56,6 +66,7 @@ module.exports = {
         '17pxNeg': '-1.063rem',
         '8.25px':'0.516rem',
         '9px': '0.563rem',
+        '11px'   : '0.688rem',
         '12.97px': '0.811rem',
         '0.625': '0.625rem',
         '12.97px': '0.811rem',
@@ -88,18 +99,9 @@ module.exports = {
         '174.15px' : '10.884rem',
         '14.625': '14.625rem'
       },
-      maxWidth: {
-        '25'  : '25rem',
-        '18.5': '18.5rem',
-        '372px'    : '23.25rem',
-        '25'  : '25rem',
-        '43'  : '43rem',
-        '342.95px' : '21.434rem',
-        '458px'    : '28.625rem',
-        '858px'    : '53.625rem',
-      },
       borderWidth: {
         '1': '1px',
+        '5': '5px',
       },
       borderRadius: {
         '3px'   : '3px',
@@ -129,8 +131,9 @@ module.exports = {
         'light-blue'           : '#C7EDED',
         'darker-green'         : '#25A72E',
         'light-green'          : '#79C523',
-        'victory-green-darker'  : '#1EC229',
-        'victory-green-light' : '#85E31A',
+        'victory-green-darker' : '#1EC229',
+        'victory-green-light'  : '#85E31A',
+        'green'                : '#79C523',
       },
       fontFamily: {
         georgia    : ['Georgia'],

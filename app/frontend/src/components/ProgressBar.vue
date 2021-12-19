@@ -1,16 +1,17 @@
 <template>
     <div class="flex justify-center">
         <div class="h-10">
-            <div class="w-274px h-10 bg-red-500">
+            <div class="w-274px h-10">
                 <div class="text-center text-14 text-yellow 
                     font-fredokaOne uppercase">
                     question {{ questionNumber }}/{{ totalQuestions }}
                 </div>
 
-                <div class="mt-0.5 flex justify-between">
+                <div class="mt-11px flex justify-between">
                     <div 
                         v-for="tile in progressTiles"
-                        class="w-50px h-5px bg-white opacity-30 rounded-3px">
+                        class="w-50px h-5px bg-white opacity-30 rounded-3px"
+                        :class="[tile.completed ? ['opacity-100'] : '']">
                     </div>
                 </div>
             </div>
@@ -38,22 +39,19 @@
 
     function buildProgressBar()
     {
-        let tileNumber = 1
-
-        totalQuestions.foreach((question)=> {
-            progressTiles.push({
-                tileNumber: tileNumber,
+        for(let i = 1; i <= totalQuestions.value; i++)
+        {
+            progressTiles.value.push({
+                tileNumber: i,
                 completed: false,
             })
+        }
 
-            tileNumber++
-        })
-
-        console.log(progressTiles)
+        for(let i = 1; i <= questionNumber.value; i++)
+        {
+            progressTiles.value[i-1].completed = true
+        }
     }
 
     buildProgressBar()
-
-
-  
 </script>
