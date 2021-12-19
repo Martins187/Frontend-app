@@ -9,7 +9,7 @@
         </div>
 
         <div class="flex justify-center mt-3 sm:mt-1.875">
-            <info-block :infoText="'pick up favourite providers'"/>
+            <info-block :infoText="'pick up favourite games'"/>
         </div>
 
         <div class="flex justify-center mt-2 sm:mt-1.875">
@@ -19,7 +19,6 @@
                     @click="changeSelectedValue(icon.id)"
                     :blockImageUrl="icon.blockImageUrl"
                     :isSelected="icon.isSelected"
-                    :background="'black'"
                 />
             </div>
         </div>
@@ -49,19 +48,19 @@
     import SmallBlock from '@/components/SmallBlock.vue'
     import InfoBlock from '@/components/InfoBlock.vue'
     import Heading from '@/components/Heading.vue'
-    import Question1Part2 from '@/pages/Question1Part2.vue'
+    import Question2 from '@/pages/Question2.vue'
 
-    import PragmaticPlayIcon from '@img/pragmatic-play-icon.png'
-    import BoomingGamesIcon from '@img/booming-games-icon.png'
-    import MicroGamingIcon from '@img/microgaming-icon.png'
-    import QuickSpinIcon from '@img/quickspin-icon.png'
-    import GoldenHero from '@img/golden-hero-icon.png'
-    import HabaneroIcon from '@img/habanero-icon.png'
-    import IsoftbetIcon from '@img/isoftbet-icon.png'
-    import EzugiIcon from '@img/ezugi-icon.png'
-    import EgtIcon from '@img/egt-icon.png'
+    import AllAboutSlotsLogo from '@img/all-about-slots-logo.png'
+    import BoomBrothersLogo from '@img/boom-brothers-logo.png'
+    import JohnHunterLogo from '@img/john-hunter-logo.png'
+    import Pirates2Logo from '@img/pirates2-logo.png'
+    import AvatarsLogo from '@img/avatars-logo.png'
+    import PiratesLogo from '@img/pirates-logo.png'
+    import ValleyLogo from '@img/valley-logo.png'
+    import RamsesLogo from '@img/ramses-logo.png'
+    import KrakenLogo from '@img/kraken-logo.png'
 
-    const bottomHeaderText = 'Please select at least 3 game providers & earn (5 free spins)'
+    const bottomHeaderText = 'Please select at least 3 casino games & earn (5 free spins)'
     const headerText = 'pick up your favorite providers & games'
     const emit = defineEmits(['change', 'delete'])
 
@@ -69,92 +68,92 @@
         {
             id:1,
             isSelected : false,
-            blockImageUrl : PragmaticPlayIcon
+            blockImageUrl : PiratesLogo
         },
         {
             id:2,
             isSelected : false,
-            blockImageUrl : BoomingGamesIcon
+            blockImageUrl : Pirates2Logo
         },
         {
             id:3,
             isSelected : false,
-            blockImageUrl : EgtIcon
+            blockImageUrl : ValleyLogo
         },
         {
             id:4,
             isSelected : false,
-            blockImageUrl : PragmaticPlayIcon
+            blockImageUrl : PiratesLogo
         },
         {
             id:5,
             isSelected : false,
-            blockImageUrl : BoomingGamesIcon
+            blockImageUrl : Pirates2Logo
         },
         {
             id:6,
             isSelected : false,
-            blockImageUrl : EgtIcon
+            blockImageUrl : ValleyLogo
         },
         {
             id:7,
             isSelected : false,
-            blockImageUrl : QuickSpinIcon
+            blockImageUrl : RamsesLogo
         },
         {
             id:8,
             isSelected : false,
-            blockImageUrl : IsoftbetIcon
+            blockImageUrl : JohnHunterLogo
         },
         {
             id:9,
             isSelected : false,
-            blockImageUrl : EzugiIcon
+            blockImageUrl : KrakenLogo
         },
         {
             id:10,
             isSelected : false,
-            blockImageUrl : QuickSpinIcon
+            blockImageUrl : RamsesLogo
         },
         {
             id:11,
             isSelected : false,
-            blockImageUrl : IsoftbetIcon
+            blockImageUrl : JohnHunterLogo
         },
         {
             id:12,
             isSelected : false,
-            blockImageUrl : EzugiIcon
+            blockImageUrl : KrakenLogo
         },
         {
             id:13,
             isSelected : false,
-            blockImageUrl : MicroGamingIcon
+            blockImageUrl : AvatarsLogo
         },
         {
             id:14,
             isSelected : false,
-            blockImageUrl : HabaneroIcon
+            blockImageUrl : AllAboutSlotsLogo
         },
         {
             id:15,
             isSelected : false,
-            blockImageUrl : GoldenHero
+            blockImageUrl : BoomBrothersLogo
         },
         {
             id:16,
             isSelected : false,
-            blockImageUrl : MicroGamingIcon
+            blockImageUrl : AvatarsLogo
         },
         {
             id:17,
             isSelected : false,
-            blockImageUrl : HabaneroIcon
+            blockImageUrl : AllAboutSlotsLogo
         },
         {
             id:18,
             isSelected : false,
-            blockImageUrl : GoldenHero
+            blockImageUrl : BoomBrothersLogo
         },
     ])
 
@@ -190,6 +189,6 @@
 
     function changePage()
     {
-        emit("changePage", Question1Part2)
+        emit("changePage", Question2)
     }
 </script>

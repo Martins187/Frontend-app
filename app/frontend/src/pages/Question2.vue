@@ -3,12 +3,12 @@
 </template>
 
 <script setup>
-    import Question3 from '@/pages/Question3.vue'
+    import Question4 from '@/pages/Question4.vue'
     
     const emit = defineEmits(['change', 'delete'])
 
     function test()
     {
-        emit("changePage", Question3)
+        emit("changePage", Question4)
     }
 </script>
