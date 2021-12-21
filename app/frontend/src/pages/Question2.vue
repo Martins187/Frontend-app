@@ -8,13 +8,12 @@
             <Heading :headerText="headerText" />
         </div>
 
-        <div class="flex justify-center mt-3 sm:mt-1.875">
-            <info-block :infoText="'pick up favourite providers'"/>
-        </div>
-
         <div class="flex justify-center mt-2 sm:mt-1.875">
-            <div class="w-357.24px flex flex-wrap justify-between sm:w-404px md:w-795px">
-                
+            <div>
+                <answer-block />
+                <answer-block />
+                <answer-block />
+                <answer-block />
             </div>
         </div>
 
@@ -38,6 +37,7 @@
     import { computed, ref } from 'vue'
 
     import HeadingBottom from '@/components/HeadingBottom.vue'
+    import AnswerBlock from '@/components/AnswerBlock.vue'
     import ProgressBar from '@/components/ProgressBar.vue'
     import LargeButton from '@/components/LargeButton.vue'
     import SmallBlock from '@/components/SmallBlock.vue'

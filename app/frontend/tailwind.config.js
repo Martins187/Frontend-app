@@ -56,6 +56,7 @@ module.exports = {
         '46px' : '2.875rem',
         '70px' : '4.375rem',
         '75px' : '4.688rem',
+        '81.22px' : '5.076rem',
         '90px' : '5.625rem',
         '105.85px' : '6.616rem',
         '30'       : '7.5rem',
@@ -68,7 +69,6 @@ module.exports = {
         '8.25px':'0.516rem',
         '9px': '0.563rem',
         '11px'   : '0.688rem',
-        '12.97px': '0.811rem',
         '0.625': '0.625rem',
         '12.97px': '0.811rem',
         '13.23px': '0.827rem',
@@ -150,7 +150,9 @@ module.exports = {
         16:['1rem', '1.25rem'],
         15:['0.939rem', '1.25rem'],
         25:['1.6rem', '1.938rem'],
-        14:['0.875rem', '1.5rem']
+        24:['1.5rem', '1.813rem'],
+        14:['0.875rem', '1.5rem'],
+        20:['1.25rem', '1.563rem']
       },
       backgroundImage: {
         'background-image' : 'url(@img/background-image.jpg)',

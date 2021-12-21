@@ -1,7 +1,7 @@
 <template>
    <div
         class="w-105.85px h-105.85px mt-13.23px items-center rounded-10px flex justify-center 
-        items-center sm:mt-4 sm:w-30 sm:h-30 hover:cursor-pointer"
+        sm:mt-4 sm:w-30 sm:h-30 hover:cursor-pointer"
         :class="classObject">
     
         <img :src="blockImageUrl" />
