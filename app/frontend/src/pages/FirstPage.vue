@@ -78,6 +78,7 @@
 
     function changePage()
     {
+        selectedBlockName.value = ''
         emit("changePage", Question1)
     }
 </script>

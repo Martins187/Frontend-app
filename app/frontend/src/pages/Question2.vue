@@ -10,15 +10,35 @@
 
         <div class="flex justify-center mt-2 sm:mt-1.875">
             <div>
-                <answer-block />
-                <answer-block />
-                <answer-block />
-                <answer-block />
+                <answer-block 
+                    v-for="answer in answerBlocks"
+                    @click="selectedAnswer = answer.blockText"
+                    :isSelected="selectedAnswer == answer.blockText"
+                    :isCorrect="answer.blockText == correctAnswer"
+                    :blockText="answer.blockText"
+                />
             </div>
         </div>
 
         <div class="mt-28.13px sm:mt-34.7px">
-            <heading-bottom :headerText="bottomHeaderText" />
+            <heading-bottom 
+                v-if="selectedAnswer == ''"
+                :headerText="bottomHeaderText" 
+            />
+            <div 
+                v-else 
+                class="flex justify-center text-30 font-fredokaOne sm:text-36">
+                <div 
+                    v-if="selectedAnswer != correctAnswer"
+                    class="text-red">
+                    That’s not it, try again!
+                </div>
+                <div 
+                    v-else
+                    class="text-green">
+                    You won 10 Free Spins!
+                </div>
+            </div>
         </div>
 
         <div class="mt-7 sm:mt-44px">
@@ -49,23 +69,23 @@
     const bottomHeaderText = 'Select the answer to earn (10 Free Spins)'
     const emit = defineEmits(['change', 'delete'])
 
-    const optionBlocks = ref([
-        { isSelected : false, blockText : 'slots'},
-        { isSelected : false,blockText : 'baccarat'},
-        { isSelected : false, blockText : 'blackjack'},
-        { isSelected : false, blockText : 'roulette'},
+    const answerBlocks = ref([
+        { blockText : 'slots'},
+        { blockText : 'baccarat'},
+        { blockText : 'blackjack'},
+        { blockText : 'roulette'},
     ])
 
-    const rightAnswer = 'blackjack'
-
+    const correctAnswer = 'blackjack'
     let selectedAnswer = ref('')
 
     const largeButtonEnabled = computed(() => {
-        return selectedAnswer.value != ''
+        return selectedAnswer.value == correctAnswer
     })
 
     function changePage()
     {
+        selectedAnswer.value = ''
         emit("changePage", Question3)
     }
 </script>

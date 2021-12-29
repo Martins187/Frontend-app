@@ -44,12 +44,12 @@
     import { computed, ref } from 'vue'
 
     import HeadingBottom from '@/components/HeadingBottom.vue'
+    import Question1Part2 from '@/pages/Question1Part2.vue'
     import ProgressBar from '@/components/ProgressBar.vue'
     import LargeButton from '@/components/LargeButton.vue'
     import SmallBlock from '@/components/SmallBlock.vue'
     import InfoBlock from '@/components/InfoBlock.vue'
     import Heading from '@/components/Heading.vue'
-    import Question1Part2 from '@/pages/Question1Part2.vue'
 
     import PragmaticPlayIcon from '@img/pragmatic-play-icon.png'
     import BoomingGamesIcon from '@img/booming-games-icon.png'
@@ -190,6 +190,7 @@
 
     function changePage()
     {
+        iconBlocks.value.forEach(block => block.isSelected = false)
         emit("changePage", Question1Part2)
     }
 </script>

@@ -189,6 +189,7 @@
 
     function changePage()
     {
+        iconBlocks.value.forEach(block => block.isSelected = false)
         emit("changePage", Question2)
     }
 </script>

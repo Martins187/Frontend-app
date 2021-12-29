@@ -135,6 +135,8 @@ module.exports = {
         'victory-green-darker' : '#1EC229',
         'victory-green-light'  : '#85E31A',
         'green'                : '#79C523',
+        'red'                  : '#FF6666',
+        'pink'                 : '#FF7E7E',
       },
       fontFamily: {
         georgia    : ['Georgia'],
@@ -152,7 +154,8 @@ module.exports = {
         25:['1.6rem', '1.938rem'],
         24:['1.5rem', '1.813rem'],
         14:['0.875rem', '1.5rem'],
-        20:['1.25rem', '1.563rem']
+        20:['1.25rem', '1.563rem'],
+        36:['2.25rem', '1.5rem']
       },
       backgroundImage: {
         'background-image' : 'url(@img/background-image.jpg)',
