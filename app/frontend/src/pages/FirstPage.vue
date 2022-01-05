@@ -41,12 +41,13 @@
 </template>
 
 <script setup>
+    import { computed, ref } from 'vue'
+    
     import HeadingBottom from '@/components/HeadingBottom.vue'
     import LargeButton from '@/components/LargeButton.vue'
     import IconBlock from '@/components/IconBlock.vue'
     import Heading from '@/components/Heading.vue'
     import Question1 from '@/pages/Question1.vue'
-    import { computed, ref } from 'vue'
 
     import DragonAndTigerIconUrl from '@img/dragon-and-tiger-icon.png'
     import BlackjackIconUrl from '@img/black-jack-icon.png'

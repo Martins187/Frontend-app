@@ -10,7 +10,7 @@
 
         <div class="flex justify-center mt-2 sm:mt-1.875">
             <div>
-                <answer-block 
+                <fixed-answer-block 
                     v-for="answer in answerBlocks"
                     @click="selectedAnswer = answer.blockText"
                     :isSelected="selectedAnswer == answer.blockText"
@@ -57,10 +57,9 @@
     import { computed, ref } from 'vue'
 
     import HeadingBottom from '@/components/HeadingBottom.vue'
-    import AnswerBlock from '@/components/AnswerBlock.vue'
+    import FixedAnswerBlock from '@/components/FixedBlock.vue'
     import ProgressBar from '@/components/ProgressBar.vue'
     import LargeButton from '@/components/LargeButton.vue'
-    import SmallBlock from '@/components/SmallBlock.vue'
     import InfoBlock from '@/components/InfoBlock.vue'
     import Heading from '@/components/Heading.vue'
     import Question3 from '@/pages/Question3.vue'

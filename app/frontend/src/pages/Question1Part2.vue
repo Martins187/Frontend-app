@@ -40,6 +40,7 @@
 </template>
 
 <script setup>
+    import { selectItem, checkIfMinimumSelected } from '@/helpers.js'
     import { computed, ref } from 'vue'
 
     import HeadingBottom from '@/components/HeadingBottom.vue'
@@ -158,33 +159,12 @@
     ])
 
     let largeButtonEnabled = computed(() => {
-        let selectedItems = 0
-
-        for(let i = 0; i < iconBlocks.value.length; i++)
-        {
-            if(iconBlocks.value[i].isSelected)
-            {
-                selectedItems++
-            }
-        }
-
-        if(selectedItems >= 3)
-        {
-            return true
-        }
-
-        return false
+       return checkIfMinimumSelected(3, iconBlocks.value)
     })
 
     function changeSelectedValue(id)
     {
-        for(let i = 0; i < iconBlocks.value.length; i++)
-        {
-            if(iconBlocks.value[i].id == id)
-            {
-                iconBlocks.value[i].isSelected = !iconBlocks.value[i].isSelected
-            }
-        }
+        selectItem(id, iconBlocks.value)
     }
 
     function changePage()
