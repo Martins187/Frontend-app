@@ -16,6 +16,8 @@
                     :isSelected="selectedAnswer == answer.blockText"
                     :isCorrect="answer.blockText == correctAnswer"
                     :blockText="answer.blockText"
+                    :largeScreenWidth="'25'"
+                    :smallScreenWidth="'345px'"
                 />
             </div>
         </div>

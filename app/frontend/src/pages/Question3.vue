@@ -8,31 +8,21 @@
             <Heading :headerText="headerText" />
         </div>
 
-        <div class="flex justify-center mt-2 sm:mt-1.875">
-            <div>
-             
+        <div class="flex justify-center">
+            <div class="flex flex-wrap justify-center sm:mt-1.875 xl:w-1200px">
+                <adjustive-block 
+                    v-for="answer in answerBlocks"
+                    @click="changeSelectedValue(answer.id)"
+                    :blockText="answer.blockText"
+                    :isSelected="answer.isSelected"
+                />
             </div>
         </div>
 
         <div class="mt-28.13px sm:mt-34.7px">
             <heading-bottom 
-                v-if="selectedAnswer == ''"
                 :headerText="bottomHeaderText" 
             />
-            <div 
-                v-else 
-                class="flex justify-center text-30 font-fredokaOne sm:text-36">
-                <div 
-                    v-if="selectedAnswer != correctAnswer"
-                    class="text-red">
-                    That’s not it, try again!
-                </div>
-                <div 
-                    v-else
-                    class="text-green">
-                    You won 10 Free Spins!
-                </div>
-            </div>
         </div>
 
         <div class="mt-7 sm:mt-44px">
@@ -48,35 +38,80 @@
 </template>
 
 <script setup>
+    import { selectItem, checkIfMinimumSelected } from '@/helpers.js'
     import { computed, ref } from 'vue'
 
     import HeadingBottom from '@/components/HeadingBottom.vue'
     import ProgressBar from '@/components/ProgressBar.vue'
     import LargeButton from '@/components/LargeButton.vue'
     import Heading from '@/components/Heading.vue'
+    import AdjustiveBlock from '@/components/AdjustiveBlock.vue'
     import Question4 from '@/pages/Question4.vue'
 
     const headerText = 'What kind of bonus do u prefer?'
-    const bottomHeaderText = 'Select the answer to earn (10 Free Spins)'
+    const bottomHeaderText = 'Please select at least 3 casino bonuses & earn (10 free spins)'
     const emit = defineEmits(['change', 'delete'])
 
     const answerBlocks = ref([
-        { blockText : 'slots'},
-        { blockText : 'baccarat'},
-        { blockText : 'blackjack'},
-        { blockText : 'roulette'},
+        {
+            id:1,
+            isSelected : false,
+            blockText : 'free spins'
+        },
+        {
+            id:2,
+            isSelected : false,
+            blockText : 'cashback'
+        },
+        {
+            id:3,
+            isSelected : false,
+            blockText : '€100 casino bonus'
+        },
+        {
+            id:4,
+            isSelected : false,
+            blockText : 'crazy bonus 400% casino bonus'
+        },
+        {
+            id:5,
+            isSelected : false,
+            blockText : 'tourament €2000 cash every week'
+        },
+        {
+            id:6,
+            isSelected : false,
+            blockText : 'deposit €20 & get 100 free spins'
+        },
+        {
+            id:7,
+            isSelected : false,
+            blockText : 'highroller bonus 100% bonus up to €500'
+        },
+        {
+            id:8,
+            isSelected : false,
+            blockText : '200% casino bonus up to €100'
+        },
+        {
+            id:9,
+            isSelected : false,
+            blockText : '400% casino bonus'
+        },
     ])
 
-    const correctAnswer = 'blackjack'
-    let selectedAnswer = ref('')
-
-    const largeButtonEnabled = computed(() => {
-        return selectedAnswer.value == correctAnswer
+    let largeButtonEnabled = computed(() => {
+       return checkIfMinimumSelected(3, answerBlocks.value)
     })
+
+    function changeSelectedValue(id)
+    {
+        selectItem(id, answerBlocks.value)
+    }
 
     function changePage()
     {
-        selectedAnswer.value = ''
-        emit("changePage", Question3)
+        answerBlocks.value.forEach(answer => answer.isSelected = false)
+        emit("changePage", Question4)
     }
 </script>

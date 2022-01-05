@@ -29,6 +29,14 @@
         return props.blockText
     })
 
+    const largeScreenWidth = computed(() => {
+        return props.largeScreenWidth
+    })
+
+    const smallScreenWidth = computed(() => {
+        return props.smallScreenWidth
+    })
+
     const classObject = computed(() => {
         return {
             'bg-gradient-to-b': isSelected.value && isCorrect.value,

@@ -7,10 +7,10 @@
             />
         </div>
 
-        <div class="w-100 flex justify-center">
+        <div class="flex justify-center">
             <keep-alive>
                 <component 
-                    class="p-5 sm:w-858px sm:p-0"
+                    class="p-5 sm:p-0"
                     :is= "component"
                     @changePage="changePage"
                 />
