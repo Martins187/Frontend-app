@@ -1,10 +1,10 @@
 <template>
    <div
-        class="w-25 h-81.22px mt-0.938 bg-gradient-to-b from-bluish to-bluish-grey text-dark-grey
+        class="h-81.22px mt-0.938 bg-gradient-to-b from-bluish to-bluish-grey text-dark-grey
         text-24 font-fredokaOne uppercase items-center rounded-10px flex justify-center border-solid border-1 
-        border-white sm:w-345px sm:h-70px sm:mt-12.97px sm:text-20 hover:cursor-pointer"
+        border-white sm:h-70px sm:mt-12.97px sm:text-20 hover:cursor-pointer text-center"
         :class="classObject">
-            {{ blockText }}
+        {{ blockText }}
    </div>
 </template>
 
@@ -14,7 +14,9 @@
     const props = defineProps({
         isSelected: {},
         isCorrect: {},
-        blockText:{}
+        blockText:{},
+        largeScreenWidth:{},
+        smallScreenWidth:{}
     })
 
     const isSelected = computed(() => {
@@ -39,6 +41,8 @@
 
     const classObject = computed(() => {
         return {
+            ['w-' + smallScreenWidth.value]  : true,
+            ['sm:w-' + largeScreenWidth.value]  : true,
             'bg-gradient-to-b': isSelected.value && isCorrect.value,
             'from-yellow': isSelected.value && isCorrect.value,
             'to-dark-yellow' : isSelected.value && isCorrect.value,
