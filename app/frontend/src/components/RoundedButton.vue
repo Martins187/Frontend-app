@@ -1,8 +1,9 @@
 <template>
-    <div class="h-60px w-60px rounded-circle text-14 font-fredokaOne 
-        text-bluish-grey2 flex justify-center uppercase items-center 
-        bg-gradient-to-b from-bluish to-bluish-grey mx-4
-        border-solid border-1 border-white"
+    <div class="h-60px w-60px flex justify-center items-center mx-1
+        text-bluish-grey2 uppercase text-14 font-fredokaOne 
+        border-solid border-1 border-white rounded-circle
+        bg-gradient-to-b from-bluish to-bluish-grey
+        sm:mx-4"
         :class="classObject">
         {{ buttonText }}
     </div>

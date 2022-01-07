@@ -1,11 +1,15 @@
 <template>
     <div>
         <div class="sm:mt-11">
-            <Heading :headerText="headerText" />
+            <heading :headerText="headerText" />
         </div>
 
-        <div class="flex justify-center mt-29.48px sm:mt-12">
-            <div class="w-342.95px flex flex-wrap justify-between sm:w-562.45px ">
+        <div 
+            class="flex justify-center mt-29.48px 
+            sm:mt-12">
+            <div 
+                class="w-342.95px flex flex-wrap justify-between 
+                sm:w-562.45px ">
                 <icon-block 
                     v-for="icon in iconBlocks"
                     @click="selectedBlockName = icon.blockText" 
@@ -16,11 +20,15 @@
             </div>
         </div>
 
-        <div class="mt-28.13px sm:mt-34.7px">
+        <div 
+            class="mt-28.13px 
+            sm:mt-34.7px">
             <heading-bottom :headerText="bottomHeaderText" />
         </div>
 
-        <div class="mt-7 sm:mt-44px">
+        <div 
+            class="mt-7 
+            sm:mt-44px">
             <large-button 
                 @buttonAction="changePage" 
                 :isEnabled="largeButtonEnabled" 
@@ -28,7 +36,9 @@
             />
         </div>
 
-        <div class="flex justify-center mt-4 pb-78.67px sm:pb-95.68px">
+        <div 
+            class="flex justify-center mt-4 pb-78.67px 
+            sm:pb-95.68px">
             <div class="text-sm font-fredokaOne text-white">
                 Already a member? 
 

@@ -1,5 +1,7 @@
 <template>
-    <div class="bg-background-image bg-cover h-full xl:h-screen w-fit sm:w-full">
+    <div 
+        class="bg-background-image bg-cover h-full w-fit
+        sm:w-screen lg:h-screen">
         <div class="flex justify-center">
             <img 
                 class="w-188.74px pt-8 sm:w-242px sm:pt-46px"

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="flex justify-center mt-1.875">
+        <div class="flex justify-center sm:mt-1.875">
             <progress-bar :questionNumber="4" :totalQuestions="5"/>
         </div>
 

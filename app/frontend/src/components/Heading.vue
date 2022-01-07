@@ -1,7 +1,9 @@
 <template>
     <div class="flex justify-center">
-        <div class="max-w-858px text-center text-30 text-white 
-            font-fredokaOne uppercase sm:text-44">
+        <div 
+            class="text-center text-30 text-white font-fredokaOne uppercase 
+            max-w-858px 
+            sm:text-44">
             {{ headerText }}
         </div>
     </div>

@@ -1,11 +1,16 @@
 <template>
     <div>
-        <div class="flex justify-center mt-1.875">
-            <progress-bar :questionNumber="5" :totalQuestions="5"/>
+        <div class="flex justify-center sm:mt-1.875">
+            <progress-bar 
+                :questionNumber="5" 
+                :totalQuestions="5"
+            />
         </div>
 
         <div class="mt-21px sm:mt-11">
-            <Heading :headerText="headerText" />
+            <heading 
+                :headerText="headerText" 
+            />
         </div>
 
         <range-picker />
@@ -41,7 +46,7 @@
     import SuccessPage from '@/pages/SuccessPage.vue'
 
     const headerText = 'Please, set up your preferred betting range'
-    const bottomHeaderText = 'Select the answer to earn (10 Free Spins)'
+    const bottomHeaderText = 'Set up deposit limit per month to earn (10 Free Spins)'
     const emit = defineEmits(['change', 'delete'])
 
     function changePage()

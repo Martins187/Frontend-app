@@ -1,20 +1,31 @@
 <template>
     <div>
-        <div class="flex justify-center mt-1.875">
+        <div 
+            class="flex justify-center 
+            sm:mt-1.875">
             <progress-bar :questionNumber="1" :totalQuestions="5"/>
         </div>
 
-        <div class="mt-21px sm:mt-11">
-            <Heading :headerText="headerText" />
+        <div 
+            class="mt-21px 
+            sm:mt-11">
+            <heading :headerText="headerText" />
         </div>
 
-        <div class="flex justify-center mt-3 sm:mt-1.875">
+        <div 
+            class="flex justify-center mt-3 
+            sm:mt-1.875">
             <info-block :infoText="'pick up favourite providers'"/>
         </div>
 
-        <div class="flex justify-center mt-2 sm:mt-1.875">
-            <div class="w-357.24px flex flex-wrap justify-between sm:w-404px md:w-795px">
-                <small-block 
+        <div 
+            class="flex justify-center mt-2 
+            sm:mt-1.875">
+            <div 
+                class="w-357.24px flex flex-wrap justify-between 
+                sm:w-404px 
+                md:w-795px">
+                <small-block
                     v-for="icon in iconBlocks"
                     @click="changeSelectedValue(icon.id)"
                     :blockImageUrl="icon.blockImageUrl"
@@ -24,11 +35,15 @@
             </div>
         </div>
 
-        <div class="mt-28.13px sm:mt-34.7px">
+        <div 
+            class="mt-28.13px 
+            sm:mt-34.7px">
             <heading-bottom :headerText="bottomHeaderText" />
         </div>
 
-        <div class="mt-7 sm:mt-44px">
+        <div 
+            class="mt-7 
+            sm:mt-44px">
             <large-button 
                 @buttonAction="changePage" 
                 :isEnabled="largeButtonEnabled" 
@@ -36,7 +51,10 @@
             />
         </div>
 
-        <div class="flex justify-center mt-4 pb-78.67px sm:pb-95.68px"></div>
+        <div 
+            class="flex justify-center mt-4 pb-78.67px 
+            sm:pb-95.68px">
+        </div>
     </div>
 </template>
 

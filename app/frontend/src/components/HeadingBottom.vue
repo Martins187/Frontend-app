@@ -1,7 +1,8 @@
 <template>
     <div class="flex justify-center">
-        <div class="max-w-858px text-center text-15 text-light-blue 
-            font-fredokaOne sm:text-18 sm:max-w-458px">
+        <div class="text-center text-15 text-light-blue font-fredokaOne
+            sm:max-w-458px sm:text-18
+            max-w-858px">
             {{ headerText }}
         </div>
     </div>
